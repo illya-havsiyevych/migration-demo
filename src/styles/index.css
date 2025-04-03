@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default theme variables */
+  --primary: #0076ff;
+  --secondary: #6c757d;
+  --accent: #f8f9fa;
+  --neutral: #ced4da;
+  --base-100: #ffffff;
+  --base-200: #f8f9fa;
+  --base-300: #e9ecef;
+  --info: #0dcaf0;
+  --success: #198754;
+  --warning: #ffc107;
+  --error: #dc3545;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-codeblock: 'Courier New', Courier, monospace;
+}
+
+/* Theme variants - these are fallbacks but primarily managed by ThemeContext */
+.dark {
+  --primary: #3f9fff;
+  --secondary: #6c757d;
+  --accent: #374151;
+  --neutral: #6b7280;
+  --base-100: #1f2937;
+  --base-200: #111827;
+  --base-300: #0f172a;
+  --info: #0dcaf0;
+  --success: #19a163;
+  --warning: #f59e0b;
+  --error: #ef4444;
+}
+
+.high-contrast {
+  --primary: #ffdd00;
+  --secondary: #ffffff;
+  --accent: #222222;
+  --neutral: #ffffff;
+  --base-100: #000000;
+  --base-200: #111111;
+  --base-300: #222222;
+  --info: #00ffff;
+  --success: #00ff00;
+  --warning: #ffff00;
+  --error: #ff0000;
+}
+
+.solarized {
+  --primary: #268bd2;
+  --secondary: #2aa198;
+  --accent: #eee8d5;
+  --neutral: #839496;
+  --base-100: #fdf6e3;
+  --base-200: #eee8d5;
+  --base-300: #93a1a1;
+  --info: #2aa198;
+  --success: #859900;
+  --warning: #b58900;
+  --error: #dc322f;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.message {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.message-user {
+  background-color: var(--accent);
+  align-self: flex-end;
+}
+
+.message-assistant {
+  background-color: var(--base-200);
+  align-self: flex-start;
+}

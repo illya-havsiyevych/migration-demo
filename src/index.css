@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default theme variables for the light theme */
+  --message-user-bg: #e2e8f0;
+  --message-user-text: #0f172a;
+  --message-ai-bg: #f1f5f9;
+  --message-ai-text: #0f172a;
+}
+
+/* Custom utility classes */
+.inherit-color {
+  color: inherit;
+}
+
+.inherit-color p,
+.inherit-color h1,
+.inherit-color h2,
+.inherit-color h3,
+.inherit-color h4,
+.inherit-color h5,
+.inherit-color h6,
+.inherit-color ul,
+.inherit-color ol,
+.inherit-color li,
+.inherit-color strong,
+.inherit-color em,
+.inherit-color a,
+.inherit-color blockquote,
+.inherit-color td,
+.inherit-color th {
+  color: inherit;
+  text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Syntax highlighting improvements */
+.dark pre,
+.high-contrast pre,
+.terminal pre {
+  background-color: #1a1a1a !important;
+  border: 1px solid #333333;
+}
+
+/* Theme-specific text enhancements */
+.dark .markdown-content {
+  font-weight: 400;
+}
+
+.high-contrast .markdown-content {
+  font-weight: 500;
+}
+
+.terminal .markdown-content {
+  font-weight: 500;
+}
+
+/* Add improved code block styling for dark themes */
+.dark code,
+.high-contrast code,
+.terminal code {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+/* Specific Terminal theme code highlighting */
+.terminal code {
+  color: #00ff00 !important;
+}
+
+/* Improve blockquote contrast in dark themes */
+.dark blockquote,
+.high-contrast blockquote,
+.terminal blockquote {
+  border-left-color: var(--primary) !important;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.5em 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
